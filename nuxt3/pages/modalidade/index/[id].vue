@@ -14,6 +14,7 @@
                     <lotto-number
                       :text="n"
                       :color="modalidade.color"
+                      :selected="contest.value.numbers.includes(n)"
                     />
                   </td>
                 </template>
@@ -21,22 +22,23 @@
             </template>
           </tbody>
         </v-table>
-        <!-- <pre>{{ numbers }}</pre> -->
-        <!-- <pre>{{ modalidade }}</pre> -->
+        <!-- <pre>contest: {{ contest }}</pre> -->
+        <pre>modalidade.contests.length: {{ modalidade.contests.length }}</pre>
       </v-col>
       <v-col
         cols="12"
         md="7"
       >
         <v-data-table-virtual
-          :items="modalidade.contests.reverse()"
+          class="border"
+          :items="modalidade.contests"
+          :disable-sort="true"
           :headers="[
             { title: 'Sorteio', key: 'contest', width: 0 },
             { title: 'Data', key: 'date', width: 150 },
             { title: 'Números', key: 'numbers' },
           ]"
-          height="calc(100vh - 60px)"
-          item-value="name"
+          height="calc(100vh - 78px)"
         >
           <template #item.numbers="scope">
             <div class="flex gap-2">
@@ -73,4 +75,13 @@ const numbers = computed(() => {
     props.modalidade.rangePerRow
   );
 });
+
+const contest = reactive({
+  value: null,
+  set(value) {
+    contest.value = value;
+  },
+});
+
+contest.set(props.modalidade.contests[0]);
 </script>

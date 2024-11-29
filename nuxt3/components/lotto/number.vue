@@ -1,8 +1,9 @@
 <template>
   <a
     href="javascript:void(0);"
-    class="text-sm p-3 font-mono rounded-full"
+    class="flex items-center justify-center text-sm font-mono rounded-full"
     :style="[
+      `width:40px; height:40px;`,
       `border: solid 1px ${props.color};`,
       props.selected ? `color: #fff;` : `color: ${props.color};`,
       props.selected ? `background: ${props.color};` : null,
