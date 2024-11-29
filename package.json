@@ -6,6 +6,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "dev": "docker compose up --build --force-recreate --remove-orphans"
+    "dev": "docker compose up --build --force-recreate --remove-orphans",
+    "build": "node ./scrap/index.js"
   }
 }

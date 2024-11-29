@@ -3,6 +3,9 @@ import Base from "./Base.js";
 export default class extends Base {
   id = "lotomania";
   name = "Lotomania";
+  rangeStart = 1;
+  rangeFinal = 100;
+  rangePerRow = 10;
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=lotomania";
 

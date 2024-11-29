@@ -3,6 +3,9 @@ import Base from "./Base.js";
 export default class extends Base {
   id = "lotofacil";
   name = "Lotofácil";
+  rangeStart = 1;
+  rangeFinal = 25;
+  rangePerRow = 5;
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=lotofacil";
 

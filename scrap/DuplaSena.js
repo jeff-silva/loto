@@ -3,6 +3,9 @@ import Base from "./Base.js";
 export default class extends Base {
   id = "dupla-sena";
   name = "Dupla Sena";
+  rangeStart = 1;
+  rangeFinal = 60;
+  rangePerRow = 10;
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=dupla-sena";
 

@@ -3,6 +3,9 @@ import XLSX from "xlsx";
 export default class Base {
   id = "id";
   name = "Name";
+  rangeStart = 0;
+  rangeFinal = 0;
+  rangePerRow = 0;
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=xxx";
 
