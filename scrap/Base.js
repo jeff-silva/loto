@@ -3,9 +3,15 @@ import XLSX from "xlsx";
 export default class Base {
   id = "id";
   name = "Name";
+  color = "#00FF00";
+  active = false;
   rangeStart = 0;
   rangeFinal = 0;
   rangePerRow = 0;
+  drawnNumbers = 6;
+  selectMin = 0;
+  selectMax = 0;
+  tutorials = [];
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=xxx";
 
@@ -22,7 +28,10 @@ export default class Base {
     }
     data = data.filter((v) => v);
     data.splice(0, 1);
-    return data.map(this.parseRow);
+    return data.map(this.parseRow).map((row) => {
+      row.numbers = row.numbers.map((n) => n.toString().padStart(2, "0"));
+      return row;
+    });
   }
 
   parseRow(row) {

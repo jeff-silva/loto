@@ -25,14 +25,37 @@ const items = [
   await Promise.all(
     items.map(async (className) => {
       className = new className();
+      if (!className.active) return;
+
       let item = {
         id: className.id,
         name: className.name,
+        color: className.color,
         rangeStart: className.rangeStart,
         rangeFinal: className.rangeFinal,
         rangePerRow: className.rangePerRow,
+        drawnNumbers: className.drawnNumbers,
+        selectMin: className.selectMin,
+        selectMax: className.selectMax,
+        tutorials: [],
         contests: [],
       };
+
+      item.tutorials = await Promise.all(
+        className.tutorials.map(async (videoId) => {
+          let video = await (
+            await fetch(
+              `https://www.youtube.com/oembed?url=http://www.youtube.com/watch?v=${videoId}&format=json`
+            )
+          ).json();
+          return {
+            id: videoId,
+            title: video.title,
+            thumbnail_url: video.thumbnail_url,
+            embed_url: `https://www.youtube.com/embed/${videoId}`,
+          };
+        })
+      );
 
       item.contests = await className.getData();
       indexData[item.id] = item;

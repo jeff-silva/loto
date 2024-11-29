@@ -3,11 +3,17 @@ import Base from "./Base.js";
 export default class extends Base {
   id = "super-sete";
   name = "Super Sete";
+  color = "#a8cf45";
+  active = true;
   rangeStart = 1;
   rangeFinal = 60;
   rangePerRow = 10;
+  drawnNumbers = 7;
+  selectMin = 7;
+  selectMax = 21;
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=super-sete";
+  tutorials = ["XQxIB8ewuxA"];
 
   parseRow(row) {
     return {

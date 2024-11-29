@@ -1,0 +1,1003 @@
+<template>
+  <div>
+    <v-row>
+      <v-col cols="2">
+        <div
+          data-overlayscrollbars-initialize=""
+          class="os-theme-thin-dark h-full w-full"
+          data-overlayscrollbars="host"
+        >
+          <div class="os-size-observer">
+            <div class="os-size-observer-listener ltr"></div>
+          </div>
+          <div
+            data-overlayscrollbars-contents=""
+            data-overlayscrollbars-viewport="scrollbarHidden"
+            style="
+              margin-right: 0px;
+              margin-bottom: 0px;
+              margin-left: 0px;
+              top: 0px;
+              right: auto;
+              left: 0px;
+              width: calc(100% + 0px);
+              padding: 0px;
+              overflow-y: scroll;
+            "
+          >
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Main
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="Dashboard"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100 font-medium !text-accent-hover bg-accent/10 hover:!bg-accent/10"
+                  href="/"
+                  ><span class="transition text-accent-hover"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M8.75 4.375v3.75a.625.625 0 0 1-.625.625h-3.75a.625.625 0 0 1-.625-.625v-3.75a.625.625 0 0 1 .625-.625h3.75a.625.625 0 0 1 .625.625Zm6.875-.625h-3.75a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 0 .625.625h3.75a.625.625 0 0 0 .625-.625v-3.75a.625.625 0 0 0-.625-.625Zm-7.5 7.5h-3.75a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 0 .625.625h3.75a.625.625 0 0 0 .625-.625v-3.75a.625.625 0 0 0-.625-.625Zm7.5 0h-3.75a.624.624 0 0 0-.625.625v3.75a.624.624 0 0 0 .625.625h3.75a.624.624 0 0 0 .625-.625v-3.75a.624.624 0 0 0-.625-.625Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M15.625 10.625h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Zm-7.5-12.5h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Zm7.5-5h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Zm-7.5 2.5h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Z"
+                      ></path></svg></span
+                  ><span class="">Dashboard</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Shop management
+              </div>
+              <div class="space-y-2">
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m17.5 5.625-2.228 7.243a1.25 1.25 0 0 1-1.196.882H6.568a1.25 1.25 0 0 1-1.202-.906L3.304 5.625H17.5Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M7.5 16.875a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm6.875-1.25a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5Zm3.723-9.816-2.23 7.243a1.866 1.866 0 0 1-1.791 1.323H6.568a1.883 1.883 0 0 1-1.802-1.36l-2.827-9.89H.625a.625.625 0 0 1 0-1.25h1.314a1.256 1.256 0 0 1 1.202.906L3.775 5H17.5a.625.625 0 0 1 .598.809Zm-1.444.441H4.132l1.835 6.422a.625.625 0 0 0 .601.453h7.509a.625.625 0 0 0 .597-.441l1.98-6.434Z"
+                        ></path></svg></span
+                    ><span class="">Shops</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <a
+                  title="My Shops"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/my-shops"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M17.5 4.375V6.25h-15V4.375a.625.625 0 0 1 .625-.625h13.75a.625.625 0 0 1 .625.625Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M16.875 3.125H3.125a1.25 1.25 0 0 0-1.25 1.25v11.25a1.25 1.25 0 0 0 1.25 1.25h13.75a1.25 1.25 0 0 0 1.25-1.25V4.375a1.25 1.25 0 0 0-1.25-1.25Zm0 1.25v1.25H3.125v-1.25h13.75Zm0 11.25H3.125v-8.75h13.75v8.75ZM13.75 8.75a3.75 3.75 0 0 1-7.5 0 .625.625 0 0 1 1.25 0 2.5 2.5 0 0 0 5 0 .625.625 0 1 1 1.25 0Z"
+                      ></path></svg></span
+                  ><span class="">My Shops</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Product management
+              </div>
+              <div class="space-y-2">
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M10 10.085v8.04a.625.625 0 0 1-.3-.078l-6.875-3.764a.625.625 0 0 1-.325-.547V6.264c0-.087.019-.174.055-.254L10 10.085Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M17.475 5.168 10.6 1.406a1.24 1.24 0 0 0-1.2 0L2.525 5.17a1.25 1.25 0 0 0-.65 1.094v7.472a1.25 1.25 0 0 0 .65 1.094L9.4 18.592a1.24 1.24 0 0 0 1.2 0l6.875-3.763a1.251 1.251 0 0 0 .65-1.094V6.264a1.25 1.25 0 0 0-.65-1.096ZM10 2.5l6.277 3.437-2.326 1.274-6.278-3.438L10 2.5Zm0 6.875L3.723 5.937l2.649-1.45 6.276 3.438L10 9.375ZM3.125 7.031l6.25 3.42v6.703l-6.25-3.418V7.03Zm13.75 6.702-6.25 3.42v-6.698l2.5-1.368v2.788a.625.625 0 1 0 1.25 0V8.402l2.5-1.37v6.7Z"
+                        ></path></svg></span
+                    ><span class="">Products</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <a
+                  title="Inventory"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/products/inventory"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M17.5 6.25 10 10.625 2.5 6.25 10 1.875l7.5 4.375Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M18.04 13.437a.625.625 0 0 1-.227.853l-7.5 4.375a.625.625 0 0 1-.63 0l-7.5-4.375a.625.625 0 0 1 .63-1.08L10 17.401l7.188-4.19a.625.625 0 0 1 .852.226Zm-.852-3.977L10 13.651l-7.188-4.19a.625.625 0 0 0-.624 1.079l7.5 4.375a.625.625 0 0 0 .63 0l7.5-4.375a.627.627 0 0 0 .068-1.043.626.626 0 0 0-.698-.037ZM1.874 6.25a.625.625 0 0 1 .313-.54l7.5-4.375a.625.625 0 0 1 .63 0l7.5 4.375a.625.625 0 0 1 0 1.08l-7.5 4.375a.625.625 0 0 1-.63 0l-7.5-4.375a.625.625 0 0 1-.313-.54Zm1.866 0L10 9.902l6.26-3.652L10 2.598 3.74 6.25Z"
+                      ></path></svg></span
+                  ><span class="">Inventory</span></a
+                ><a
+                  title="Categories"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/categories"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="m5 5 3.125 9.375h-6.25L5 5Zm10.625.938a3.438 3.438 0 1 0-6.875 0 3.438 3.438 0 0 0 6.875 0Zm-5 5.937v4.375H17.5v-4.375h-6.875Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M17.5 11.25h-6.875a.625.625 0 0 0-.625.625v4.375a.625.625 0 0 0 .625.625H17.5a.625.625 0 0 0 .625-.625v-4.375a.625.625 0 0 0-.625-.625Zm-.625 4.375H11.25V12.5h5.625v3.125ZM5.593 4.802a.625.625 0 0 0-1.186 0l-3.125 9.375a.625.625 0 0 0 .593.823h6.25a.625.625 0 0 0 .593-.823L5.593 4.802Zm-2.85 8.948L5 6.977l2.258 6.773H2.742ZM16.25 5.937a4.062 4.062 0 1 0-8.125 0 4.062 4.062 0 0 0 8.125 0Zm-6.875 0a2.812 2.812 0 1 1 5.625 0 2.812 2.812 0 0 1-5.625 0Z"
+                      ></path></svg></span
+                  ><span class="">Categories</span></a
+                ><a
+                  title="Tags"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/tags"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="m18.567 11.953-6.614 6.614a.625.625 0 0 1-.883 0l-7.762-7.76a.625.625 0 0 1-.183-.44V3.124h7.241c.166 0 .325.066.442.183l7.76 7.76a.626.626 0 0 1 0 .885Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M19.009 10.625 11.25 2.866a1.238 1.238 0 0 0-.884-.366H3.125a.625.625 0 0 0-.625.625v7.241a1.239 1.239 0 0 0 .366.884l7.759 7.759a1.25 1.25 0 0 0 1.768 0l6.616-6.616a1.25 1.25 0 0 0 0-1.768Zm-7.5 7.5L3.75 10.366V3.75h6.616l7.759 7.759-6.616 6.616ZM7.5 6.563a.938.938 0 1 1-1.875 0 .938.938 0 0 1 1.875 0Z"
+                      ></path></svg></span
+                  ><span class="">Tags</span></a
+                ><a
+                  title="Attributes"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/attributes"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M17.984 6.094 15.68 8.06a.398.398 0 0 0-.13.39l.69 2.927a.406.406 0 0 1-.606.435l-2.611-1.552a.413.413 0 0 0-.42 0L9.99 11.812a.407.407 0 0 1-.607-.435l.694-2.922a.399.399 0 0 0-.13-.391l-2.307-1.97a.4.4 0 0 1 .235-.704l3.037-.257a.407.407 0 0 0 .337-.245l1.188-2.768a.41.41 0 0 1 .75 0l1.187 2.768a.407.407 0 0 0 .34.244l3.037.258a.4.4 0 0 1 .232.704Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M18.7 5.476a1.029 1.029 0 0 0-.895-.71l-2.908-.247-1.135-2.644a1.035 1.035 0 0 0-1.899 0L10.73 4.52l-2.909.245a1.026 1.026 0 0 0-.585 1.802l2.2 1.875-.658 2.791a1.023 1.023 0 0 0 .953 1.26c.204.01.405-.04.58-.144l2.5-1.484 2.5 1.484a1.035 1.035 0 0 0 1.498-.526c.07-.189.082-.394.036-.59l-.659-2.791 2.2-1.875a1.022 1.022 0 0 0 .316-1.09Zm-3.426 2.11a1.02 1.02 0 0 0-.333 1.015l.571 2.422-2.17-1.29a1.034 1.034 0 0 0-1.06 0l-2.17 1.282.572-2.421a1.015 1.015 0 0 0-.332-1.016L8.456 5.967l2.507-.213a1.028 1.028 0 0 0 .86-.62l.99-2.303.987 2.303a1.03 1.03 0 0 0 .86.62l2.506.213-1.892 1.619ZM6.692 9.817l-4.375 4.375a.626.626 0 0 1-.884-.884l4.375-4.375a.625.625 0 0 1 .884.884Zm1.25 4.375-4.375 4.375a.626.626 0 0 1-.884-.884l4.375-4.375a.625.625 0 1 1 .884.884Zm5.625-.884a.624.624 0 0 1 0 .884l-4.375 4.375a.626.626 0 0 1-.884-.884l4.375-4.375a.626.626 0 0 1 .884 0Z"
+                      ></path></svg></span
+                  ><span class="">Attributes</span></a
+                ><a
+                  title="Manufacturers/Publications"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/manufacturers"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M16.875 10.625v6.25H3.125v-10l5 3.75v-3.75l5 3.75h3.75Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M9.063 13.75a.625.625 0 0 1-.626.625H6.25a.625.625 0 1 1 0-1.25h2.188a.625.625 0 0 1 .624.625Zm4.687-.625h-2.188a.624.624 0 1 0 0 1.25h2.188a.624.624 0 1 0 0-1.25Zm5.625 3.75a.624.624 0 0 1-.625.625H1.25a.625.625 0 1 1 0-1.25H2.5V6.875a.625.625 0 0 1 1-.5l4 3v-2.5a.625.625 0 0 1 1-.5l3.027 2.27.903-6.322a1.256 1.256 0 0 1 1.237-1.073h1.416a1.256 1.256 0 0 1 1.237 1.073l1.172 8.214s.006.06.006.088v5.625h1.25a.626.626 0 0 1 .627.625ZM12.667 9.5l.667.5h2.82l-1.071-7.5h-1.416l-1 7ZM3.75 16.25h12.5v-5h-3.125a.625.625 0 0 1-.375-.125l-1.125-.844L8.75 8.125v2.5a.625.625 0 0 1-1 .5l-4-3v8.125Z"
+                      ></path></svg></span
+                  ><span class="">Manufacturers/Publications</span></a
+                ><a
+                  title="Authors"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/authors"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M15 7.5a5 5 0 1 1-10 0 5 5 0 0 1 10 0Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M18.04 16.563c-1.19-2.057-3.023-3.532-5.163-4.232a5.625 5.625 0 1 0-5.754 0c-2.14.699-3.974 2.174-5.164 4.232a.625.625 0 1 0 1.082.625c1.472-2.544 4.074-4.063 6.959-4.063s5.487 1.519 6.959 4.063a.627.627 0 0 0 1.047.079.625.625 0 0 0 .035-.704ZM5.626 7.5a4.375 4.375 0 1 1 8.75 0 4.375 4.375 0 0 1-8.75 0Z"
+                      ></path></svg></span
+                  ><span class="">Authors</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                E-commerce Management
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="Taxes"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/taxes"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M7.484 4.39a2.187 2.187 0 1 1-3.093 3.094 2.187 2.187 0 0 1 3.093-3.093Zm8.125 8.126a2.188 2.188 0 1 0-3.093 3.094 2.188 2.188 0 0 0 3.093-3.094Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="m16.067 4.816-11.25 11.25a.625.625 0 1 1-.884-.885l11.25-11.25a.625.625 0 1 1 .884.884ZM3.948 7.925a2.813 2.813 0 1 1 3.978-3.977 2.813 2.813 0 0 1-3.978 3.977Zm.427-1.988A1.562 1.562 0 1 0 7.5 5.935a1.562 1.562 0 0 0-3.125.002Zm12.5 8.125a2.812 2.812 0 1 1-5.625 0 2.812 2.812 0 0 1 5.625 0Zm-1.25 0a1.562 1.562 0 1 0-3.124 0 1.562 1.562 0 0 0 3.124 0Z"
+                      ></path></svg></span
+                  ><span class="">Taxes</span></a
+                ><a
+                  title="Shippings"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/shippings"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M18.75 9.375v5a.624.624 0 0 1-.625.625H16.25a1.875 1.875 0 1 0-3.75 0h-5a1.875 1.875 0 1 0-3.75 0H1.875a.625.625 0 0 1-.625-.625V11.25h12.5V9.375h5Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="m19.33 9.14-1.094-2.734a1.245 1.245 0 0 0-1.16-.781h-2.701V5a.625.625 0 0 0-.625-.625H1.875a1.25 1.25 0 0 0-1.25 1.25v8.75a1.25 1.25 0 0 0 1.25 1.25h1.328a2.5 2.5 0 0 0 4.844 0h3.906a2.5 2.5 0 0 0 4.844 0h1.328a1.25 1.25 0 0 0 1.25-1.25v-5c0-.08-.015-.16-.045-.234Zm-4.955-2.265h2.702l.75 1.875h-3.452V6.875Zm-12.5-1.25h11.25v5H1.875v-5Zm3.75 10.625a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm6.328-1.875H8.047a2.5 2.5 0 0 0-4.844 0H1.875v-2.5h11.25v.962a2.507 2.507 0 0 0-1.172 1.538Zm2.422 1.875a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm3.75-1.875h-1.328a2.505 2.505 0 0 0-2.422-1.875V10h3.75v4.375Z"
+                      ></path></svg></span
+                  ><span class="">Shippings</span></a
+                ><a
+                  title="Withdrawals"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/withdraws"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M17.5 4.375V16.25L15 15l-2.5 1.25L10 15l-2.5 1.25L5 15l-2.5 1.25V4.375a.625.625 0 0 1 .625-.625h13.75a.625.625 0 0 1 .625.625Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M5.625 8.125A.625.625 0 0 1 6.25 7.5h7.5a.625.625 0 1 1 0 1.25h-7.5a.625.625 0 0 1-.625-.625Zm.625 3.125h7.5a.624.624 0 1 0 0-1.25h-7.5a.625.625 0 1 0 0 1.25Zm11.875-6.875V16.25a.625.625 0 0 1-.905.559L15 15.699l-2.22 1.11a.626.626 0 0 1-.56 0L10 15.699l-2.22 1.11a.626.626 0 0 1-.56 0L5 15.699l-2.22 1.11a.624.624 0 0 1-.905-.559V4.375a1.25 1.25 0 0 1 1.25-1.25h13.75a1.25 1.25 0 0 1 1.25 1.25Zm-1.25 0H3.125v10.864l1.595-.798a.626.626 0 0 1 .56 0l2.22 1.11 2.22-1.11a.626.626 0 0 1 .56 0l2.22 1.11 2.22-1.11a.626.626 0 0 1 .56 0l1.595.798V4.375Z"
+                      ></path></svg></span
+                  ><span class="">Withdrawals</span></a
+                >
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <g
+                          fill="currentColor"
+                          clip-path="url(#a)"
+                        >
+                          <path
+                            d="M1.25 11.875h2.5v4.375h-2.5a.625.625 0 0 1-.625-.625V12.5a.625.625 0 0 1 .625-.625Zm14.688-7.5c-.325 0-.645.073-.938.212a2.188 2.188 0 1 0-1.25 2.077 2.188 2.188 0 1 0 2.188-2.289Z"
+                            opacity="0.2"
+                          ></path>
+                          <path
+                            d="M17.994 11.02a1.908 1.908 0 0 0-1.659-.33l-3.269.751a2.187 2.187 0 0 0-2.129-2.691h-3.91a2.486 2.486 0 0 0-1.768.732L3.49 11.25H1.25A1.25 1.25 0 0 0 0 12.5v3.125a1.25 1.25 0 0 0 1.25 1.25h8.125a.624.624 0 0 0 .152-.019l5-1.25a.543.543 0 0 0 .093-.031l3.036-1.292.035-.016a1.921 1.921 0 0 0 .307-3.247h-.004ZM1.25 12.5h1.875v3.125H1.25V12.5Zm15.893.641-2.969 1.264-4.877 1.22H4.375v-3.491l1.768-1.768A1.239 1.239 0 0 1 7.027 10h3.91a.938.938 0 0 1 0 1.875H8.75a.625.625 0 1 0 0 1.25h2.5a.651.651 0 0 0 .14-.016l5.234-1.204.024-.006a.673.673 0 0 1 .493 1.242h.002ZM12.813 7.5c.154 0 .308-.012.46-.037a2.812 2.812 0 1 0 2.205-3.672A2.812 2.812 0 1 0 12.813 7.5Zm4.687-.938a1.562 1.562 0 1 1-3.125 0 1.562 1.562 0 0 1 3.125 0Zm-4.688-3.437a1.562 1.562 0 0 1 1.504 1.141 2.813 2.813 0 0 0-1.171 1.948 1.563 1.563 0 1 1-.332-3.09Z"
+                          ></path>
+                        </g>
+                        <defs>
+                          <clipPath id="a">
+                            <path
+                              fill="#fff"
+                              d="M0 0h20v20H0z"
+                            ></path>
+                          </clipPath>
+                        </defs></svg></span
+                    ><span class="">Refunds</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Layout/Page control
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="Home pages / Groups"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/groups"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M16.875 9.026v7.849h-5V12.5a.624.624 0 0 0-.625-.625h-2.5a.625.625 0 0 0-.625.625v4.375h-5V9.026a.625.625 0 0 1 .205-.462l6.25-5.902a.625.625 0 0 1 .841 0l6.25 5.902a.625.625 0 0 1 .204.462Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M18.75 16.25H17.5V9.027a1.25 1.25 0 0 0-.404-.92l-6.25-5.897a1.25 1.25 0 0 0-1.69-.009l-.01.01-6.242 5.896a1.25 1.25 0 0 0-.404.92v7.223H1.25a.625.625 0 0 0 0 1.25h17.5a.625.625 0 1 0 0-1.25Zm-15-7.223.009-.007L10 3.125l6.242 5.893.009.008v7.224H12.5V12.5a1.25 1.25 0 0 0-1.25-1.25h-2.5A1.25 1.25 0 0 0 7.5 12.5v3.75H3.75V9.027Zm7.5 7.223h-2.5V12.5h2.5v3.75Z"
+                      ></path></svg></span
+                  ><span class="">Home pages / Groups</span></a
+                >
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M18.125 10c0 .977-1.392 1.715-1.772 2.632-.366.884.111 2.394-.608 3.113-.718.72-2.229.243-3.113.608-.913.38-1.655 1.772-2.632 1.772-.977 0-1.719-1.392-2.632-1.772-.884-.366-2.395.111-3.113-.608-.72-.718-.242-2.229-.608-3.113-.38-.913-1.772-1.655-1.772-2.632 0-.977 1.392-1.719 1.772-2.632.366-.884-.111-2.395.608-3.113.718-.72 2.23-.242 3.113-.608.917-.38 1.655-1.772 2.632-1.772.977 0 1.719 1.392 2.632 1.772.884.366 2.395-.111 3.113.608.72.718.243 2.229.608 3.113.38.917 1.772 1.655 1.772 2.632Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M17.645 8.033c-.294-.308-.599-.625-.714-.904-.106-.256-.112-.679-.119-1.09-.011-.762-.024-1.626-.625-2.226-.6-.601-1.464-.614-2.227-.626-.41-.006-.833-.012-1.089-.118-.278-.115-.596-.42-.904-.714C11.428 1.837 10.816 1.25 10 1.25c-.816 0-1.427.587-1.967 1.105-.308.294-.625.599-.904.714-.254.106-.679.112-1.09.119-.762.011-1.626.024-2.226.624-.601.601-.61 1.465-.626 2.228-.006.41-.012.833-.118 1.089-.115.278-.42.596-.714.904C1.837 8.572 1.25 9.184 1.25 10c0 .816.587 1.427 1.105 1.967.294.308.599.625.714.904.106.256.112.679.119 1.09.011.762.024 1.626.624 2.226.601.601 1.465.614 2.228.625.41.007.833.013 1.089.12.278.114.596.419.904.713.539.518 1.151 1.105 1.967 1.105.816 0 1.427-.587 1.967-1.105.308-.294.625-.599.904-.714.256-.106.679-.112 1.09-.119.762-.011 1.626-.024 2.226-.625.601-.6.614-1.464.625-2.227.007-.41.013-.833.12-1.089.114-.278.419-.596.713-.904.518-.539 1.105-1.151 1.105-1.967 0-.816-.587-1.427-1.105-1.967Zm-.902 3.07c-.374.39-.762.794-.967 1.29-.197.476-.206 1.021-.213 1.548-.008.547-.017 1.12-.26 1.362s-.812.252-1.362.26c-.527.007-1.072.016-1.548.213-.496.205-.9.593-1.29.967-.391.374-.79.757-1.103.757-.313 0-.715-.384-1.102-.757-.388-.373-.795-.762-1.291-.967-.477-.197-1.021-.206-1.548-.213-.547-.008-1.12-.017-1.362-.26s-.252-.812-.26-1.362c-.007-.527-.016-1.072-.213-1.548-.205-.496-.593-.9-.967-1.29-.374-.391-.757-.79-.757-1.103 0-.313.384-.715.757-1.102.373-.388.762-.795.967-1.291.197-.477.206-1.021.213-1.548.008-.547.017-1.12.26-1.362s.812-.252 1.362-.26c.527-.007 1.071-.016 1.548-.213.496-.205.9-.593 1.29-.967.391-.374.79-.757 1.103-.757.313 0 .715.384 1.102.757.388.373.795.762 1.291.967.476.197 1.021.206 1.548.213.547.008 1.12.017 1.362.26s.252.812.26 1.362c.007.527.016 1.071.213 1.548.205.496.593.9.967 1.29.374.391.757.79.757 1.103 0 .313-.384.715-.757 1.102Zm-5.805 2.96a.937.937 0 1 1-1.875 0 .937.937 0 0 1 1.874 0Zm2.187-5.626c0 1.358-1.075 2.495-2.5 2.757v.056a.624.624 0 1 1-1.25 0v-.625A.625.625 0 0 1 10 10c1.034 0 1.875-.703 1.875-1.563 0-.859-.841-1.562-1.875-1.562s-1.875.703-1.875 1.563v.312a.625.625 0 0 1-1.25 0v-.313c0-1.55 1.402-2.812 3.125-2.812s3.125 1.262 3.125 2.813Z"
+                        ></path></svg></span
+                    ><span class="">FAQs</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M16.25 6.875h-4.375V2.5l4.375 4.375Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="m16.692 6.433-4.375-4.375a.625.625 0 0 0-.442-.183h-7.5a1.25 1.25 0 0 0-1.25 1.25v13.75a1.25 1.25 0 0 0 1.25 1.25h11.25a1.25 1.25 0 0 0 1.25-1.25v-10a.624.624 0 0 0-.183-.442ZM12.5 4.009l2.241 2.241H12.5V4.009Zm3.125 12.866H4.375V3.125h6.875v3.75a.625.625 0 0 0 .625.625h3.75v9.375Zm-2.5-6.25a.624.624 0 0 1-.625.625h-5a.625.625 0 1 1 0-1.25h5a.624.624 0 0 1 .625.625Zm0 2.5a.624.624 0 0 1-.625.625h-5a.625.625 0 1 1 0-1.25h5a.624.624 0 0 1 .625.625Z"
+                        ></path></svg></span
+                    ><span class="">Terms And Conditions</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Order management
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="Orders"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/orders"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M16.875 5v10h-8.75V5h8.75Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M17.5 10a.625.625 0 0 1-.625.625h-8.75a.625.625 0 0 1 0-1.25h8.75A.625.625 0 0 1 17.5 10ZM8.125 5.625h8.75a.625.625 0 0 0 0-1.25h-8.75a.625.625 0 0 0 0 1.25Zm8.75 8.75h-8.75a.625.625 0 1 0 0 1.25h8.75a.625.625 0 0 0 0-1.25ZM3.405 4.309l.345-.173v3.989a.625.625 0 0 0 1.25 0v-5a.625.625 0 0 0-.905-.56l-1.25.626a.625.625 0 0 0 .56 1.118Zm2.827 7.935a1.855 1.855 0 0 0-.75-1.246 1.942 1.942 0 0 0-2.665.367 1.846 1.846 0 0 0-.279.505.625.625 0 1 0 1.172.427.614.614 0 0 1 .092-.167.685.685 0 0 1 1.108.058.597.597 0 0 1-.044.694l-2.242 2.994a.626.626 0 0 0 .501.999h2.5a.625.625 0 0 0 0-1.25h-1.25l1.49-1.995a1.833 1.833 0 0 0 .367-1.386Z"
+                      ></path></svg></span
+                  ><span class="">Orders</span></a
+                ><a
+                  title="Create Order"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/orders/create"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M15.625 6.875 10 12.5H7.5V10l5.625-5.625 2.5 2.5Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="m17.942 4.558-2.5-2.5a.626.626 0 0 0-.884 0l-7.5 7.5a.625.625 0 0 0-.183.442v2.5a.625.625 0 0 0 .625.625H10a.624.624 0 0 0 .442-.183l7.5-7.5a.626.626 0 0 0 0-.884Zm-8.2 7.317H8.124v-1.616l5-5 1.616 1.616-5 5Zm5.883-5.884-1.616-1.616.991-.991L16.616 5l-.991.991ZM17.5 9.375v6.875a1.25 1.25 0 0 1-1.25 1.25H3.75a1.25 1.25 0 0 1-1.25-1.25V3.75A1.25 1.25 0 0 1 3.75 2.5h6.875a.625.625 0 1 1 0 1.25H3.75v12.5h12.5V9.375a.625.625 0 1 1 1.25 0Z"
+                      ></path></svg></span
+                  ><span class="">Create Order</span></a
+                ><a
+                  title="Transactions"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/orders/transaction"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M16.875 3.75v8.125a.624.624 0 0 1-.625.625h-3.125v3.75a.624.624 0 0 1-.625.625H3.75a.625.625 0 0 1-.625-.625V8.125A.625.625 0 0 1 3.75 7.5h3.125V3.75a.625.625 0 0 1 .625-.625h8.75a.625.625 0 0 1 .625.625Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M17.5 3.75v8.125a1.25 1.25 0 0 1-1.25 1.25H7.759l.808.808a.626.626 0 0 1-.884.884l-1.875-1.875a.625.625 0 0 1 0-.884l1.875-1.875a.625.625 0 1 1 .884.884l-.808.808h8.491V3.75H7.5v.625a.625.625 0 0 1-1.25 0V3.75A1.25 1.25 0 0 1 7.5 2.5h8.75a1.25 1.25 0 0 1 1.25 1.25ZM13.125 15a.624.624 0 0 0-.625.625v.625H3.75V8.125h8.491l-.808.808a.625.625 0 0 0 .884.884l1.875-1.875a.626.626 0 0 0 0-.884l-1.875-1.875a.625.625 0 0 0-.884.884l.808.808H3.75a1.25 1.25 0 0 0-1.25 1.25v8.125a1.25 1.25 0 0 0 1.25 1.25h8.75a1.25 1.25 0 0 0 1.25-1.25v-.625a.624.624 0 0 0-.625-.625Z"
+                      ></path></svg></span
+                  ><span class="">Transactions</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                User control
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="All users"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/users"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M13.125 11.25a3.125 3.125 0 1 1-6.25 0 3.125 3.125 0 0 1 6.25 0ZM5 4.375a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm10 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M19.125 11.75a.625.625 0 0 1-.875-.125A4.032 4.032 0 0 0 15 10a.625.625 0 1 1 0-1.25 1.875 1.875 0 1 0-1.816-2.344.626.626 0 0 1-1.21-.312 3.125 3.125 0 1 1 5.135 3.086c.85.368 1.589.952 2.143 1.694a.624.624 0 0 1-.127.876Zm-4.21 4.812a.623.623 0 0 1-.454.947.623.623 0 0 1-.627-.322 4.454 4.454 0 0 0-7.668 0 .625.625 0 1 1-1.082-.625 5.63 5.63 0 0 1 2.636-2.337 3.75 3.75 0 1 1 4.56 0 5.63 5.63 0 0 1 2.636 2.337ZM10 13.75a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM5.625 9.375A.625.625 0 0 0 5 8.75a1.875 1.875 0 1 1 1.816-2.344.625.625 0 1 0 1.21-.312A3.125 3.125 0 1 0 2.892 9.18 5.308 5.308 0 0 0 .75 10.874a.625.625 0 0 0 1 .75A4.031 4.031 0 0 1 5 10a.625.625 0 0 0 .625-.625Z"
+                      ></path></svg></span
+                  ><span class="">All users</span></a
+                ><a
+                  title="Admin list"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/users/admins"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <g
+                        fill="currentColor"
+                        clip-path="url(#a)"
+                      >
+                        <path
+                          d="M9.375 8.125a3.125 3.125 0 1 1-6.25 0 3.125 3.125 0 0 1 6.25 0Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          d="M11.25 6.25a.625.625 0 0 1 .625-.625h7.5a.625.625 0 1 1 0 1.25h-7.5a.625.625 0 0 1-.625-.625Zm8.125 3.125h-7.5a.625.625 0 0 0 0 1.25h7.5a.624.624 0 1 0 0-1.25Zm0 3.75H13.75a.625.625 0 1 0 0 1.25h5.625a.624.624 0 1 0 0-1.25Zm-7.52 1.719a.625.625 0 0 1-1.211.313c-.482-1.87-2.37-3.282-4.395-3.282-2.024 0-3.913 1.41-4.394 3.281a.625.625 0 0 1-1.211-.312c.436-1.696 1.706-3.07 3.317-3.75a3.75 3.75 0 1 1 4.576 0c1.612.68 2.882 2.054 3.318 3.75ZM6.25 10.625a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                        ></path>
+                      </g>
+                      <defs>
+                        <clipPath id="a">
+                          <path
+                            fill="#fff"
+                            d="M0 0h20v20H0z"
+                          ></path>
+                        </clipPath>
+                      </defs></svg></span
+                  ><span class="">Admin list</span></a
+                >
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M17.5 7.5v1.25a2.5 2.5 0 0 1-5 0V7.5h-5v1.25a2.5 2.5 0 0 1-5 0V7.5l1.12-3.922a.625.625 0 0 1 .599-.453H15.78a.625.625 0 0 1 .601.453L17.5 7.5Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M18.125 7.5a.62.62 0 0 0-.023-.172L16.98 3.406a1.256 1.256 0 0 0-1.199-.906H4.22a1.256 1.256 0 0 0-1.2.906L1.9 7.328a.617.617 0 0 0-.024.172v1.25a3.125 3.125 0 0 0 1.25 2.5v5a1.25 1.25 0 0 0 1.25 1.25h11.25a1.25 1.25 0 0 0 1.25-1.25v-5a3.125 3.125 0 0 0 1.25-2.5V7.5ZM4.219 3.75H15.78l.892 3.125H3.33l.89-3.125Zm3.906 4.375h3.75v.625a1.875 1.875 0 1 1-3.75 0v-.625Zm-1.25 0v.625a1.875 1.875 0 1 1-3.75 0v-.625h3.75Zm8.75 8.125H4.375v-4.438A3.126 3.126 0 0 0 7.5 10.624a3.126 3.126 0 0 0 5 .001 3.125 3.125 0 0 0 3.125 1.188v4.437ZM15 10.625a1.875 1.875 0 0 1-1.875-1.875v-.625h3.75v.625A1.875 1.875 0 0 1 15 10.625Z"
+                        ></path></svg></span
+                    ><span class="">Vendors</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M8.75 13.125a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM6.25 2.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm7.5 8.125a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm0-3.125a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M2.125 9.875A.625.625 0 0 0 3 9.75a4.063 4.063 0 0 1 6.5 0 .625.625 0 0 0 1 0 4.062 4.062 0 0 1 6.5 0A.625.625 0 0 0 18 9a5.3 5.3 0 0 0-2.14-1.695 3.125 3.125 0 1 0-4.215 0 5.256 5.256 0 0 0-1.64 1.118 5.256 5.256 0 0 0-1.64-1.118 3.125 3.125 0 1 0-4.215 0A5.303 5.303 0 0 0 2 9a.625.625 0 0 0 .125.875Zm11.625-6.75a1.875 1.875 0 1 1 0 3.75 1.875 1.875 0 0 1 0-3.75Zm-7.5 0a1.875 1.875 0 1 1 0 3.75 1.875 1.875 0 0 1 0-3.75Zm9.61 12.305a3.125 3.125 0 1 0-4.215 0 5.255 5.255 0 0 0-1.64 1.118 5.255 5.255 0 0 0-1.64-1.118 3.125 3.125 0 1 0-4.215 0A5.302 5.302 0 0 0 2 17.125a.625.625 0 0 0 1 .75 4.063 4.063 0 0 1 6.5 0 .625.625 0 0 0 1 0 4.063 4.063 0 0 1 6.5 0 .625.625 0 0 0 1-.75 5.3 5.3 0 0 0-2.14-1.695Zm-9.61-4.18a1.875 1.875 0 1 1 0 3.75 1.875 1.875 0 0 1 0-3.75Zm7.5 0a1.875 1.875 0 1 1 0 3.75 1.875 1.875 0 0 1 0-3.75Z"
+                        ></path></svg></span
+                    ><span class="">Staff</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <a
+                  title="Customers"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/users/customer"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M8.125 3.125a1.875 1.875 0 1 1 3.75 0 1.875 1.875 0 0 1-3.75 0Zm8.476 7.774-3.54-4.014a1.875 1.875 0 0 0-1.407-.635H8.346a1.875 1.875 0 0 0-1.406.635L3.4 10.9a.94.94 0 0 0 1.327 1.328L7.5 10l-1.787 6.791a.938.938 0 0 0 1.7.793L10 13.125l2.588 4.459a.938.938 0 0 0 1.699-.793L12.5 10l2.774 2.226a.939.939 0 1 0 1.328-1.328l-.001.001Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M12.5 3.125a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0ZM10 4.375a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm7.058 6.098-3.53-4.002a2.5 2.5 0 0 0-1.874-.846H8.346a2.5 2.5 0 0 0-1.875.846l-3.529 4.002a1.562 1.562 0 0 0 2.198 2.22l1.273-1.021-1.292 4.912a1.563 1.563 0 0 0 2.848 1.291L10 14.37l2.031 3.505a1.562 1.562 0 0 0 2.845-1.29l-1.29-4.913 1.274 1.022a1.563 1.563 0 0 0 2.198-2.221Zm-.9 1.31a.311.311 0 0 1-.442 0c-.016-.016-.032-.031-.05-.045L12.89 9.512a.625.625 0 0 0-.996.644l1.788 6.797c.009.036.022.072.037.106a.312.312 0 1 1-.566.264.502.502 0 0 0-.026-.05l-2.587-4.46a.625.625 0 0 0-1.082 0L6.875 17.27a.487.487 0 0 0-.026.049.313.313 0 0 1-.567-.264.601.601 0 0 0 .038-.106l1.785-6.793a.625.625 0 0 0-.996-.644l-2.775 2.226c-.018.014-.034.03-.05.045a.311.311 0 0 1-.517-.097.313.313 0 0 1 .074-.345.46.46 0 0 0 .027-.028l3.54-4.015a1.25 1.25 0 0 1 .938-.423h3.308a1.25 1.25 0 0 1 .937.423l3.541 4.014.027.03a.313.313 0 0 1 0 .44Z"
+                      ></path></svg></span
+                  ><span class="">Customers</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Feedback control
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="Reviews"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/reviews"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M14.385 11.539a.632.632 0 0 0-.198.616l1.056 4.574a.624.624 0 0 1-.929.679l-3.992-2.422a.62.62 0 0 0-.644 0l-3.992 2.422a.626.626 0 0 1-.929-.68l1.056-4.573a.631.631 0 0 0-.198-.616L2.09 8.465a.625.625 0 0 1 .354-1.1l4.646-.401a.625.625 0 0 0 .52-.381l1.816-4.325a.625.625 0 0 1 1.146 0l1.815 4.325a.624.624 0 0 0 .521.381l4.646.402a.625.625 0 0 1 .354 1.099l-3.524 3.074Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M18.688 7.6a1.25 1.25 0 0 0-1.08-.859l-4.64-.4-1.818-4.325a1.246 1.246 0 0 0-2.3 0L7.037 6.341l-4.646.403a1.25 1.25 0 0 0-.711 2.192l3.524 3.08-1.056 4.573a1.25 1.25 0 0 0 1.862 1.355l3.985-2.422 3.993 2.422a1.25 1.25 0 0 0 1.862-1.355l-1.056-4.578 3.524-3.075a1.25 1.25 0 0 0 .37-1.335Zm-1.19.391-3.523 3.075a1.25 1.25 0 0 0-.397 1.228l1.059 4.58-3.99-2.421a1.242 1.242 0 0 0-1.292 0L5.37 16.875l1.052-4.578a1.25 1.25 0 0 0-.397-1.228L2.5 7.996v-.007l4.644-.402a1.25 1.25 0 0 0 1.043-.761L10 2.506l1.813 4.32a1.25 1.25 0 0 0 1.042.761l4.645.402v.005l-.002-.003Z"
+                      ></path></svg></span
+                  ><span class="">Reviews</span></a
+                ><a
+                  title="Questions"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/questions"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M17.5 10a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M10.938 14.063a.937.937 0 1 1-1.875 0 .937.937 0 0 1 1.874 0ZM10 5.624c-1.723 0-3.125 1.262-3.125 2.813v.312a.625.625 0 0 0 1.25 0v-.313c0-.859.841-1.562 1.875-1.562s1.875.703 1.875 1.563C11.875 9.296 11.034 10 10 10a.625.625 0 0 0-.625.625v.625a.625.625 0 1 0 1.25 0v-.056c1.425-.262 2.5-1.399 2.5-2.757 0-1.55-1.402-2.812-3.125-2.812ZM18.125 10A8.125 8.125 0 1 1 10 1.875 8.133 8.133 0 0 1 18.125 10Zm-1.25 0A6.875 6.875 0 1 0 10 16.875 6.883 6.883 0 0 0 16.875 10Z"
+                      ></path></svg></span
+                  ><span class="">Questions</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Promotional management
+              </div>
+              <div class="space-y-2">
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M16.25 10v5.625a.624.624 0 0 1-.625.625H4.375a.625.625 0 0 1-.625-.625V10h12.5Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M16.875 5.625h-2.74c.03-.026.061-.05.09-.078A2.306 2.306 0 0 0 15 3.873a2.546 2.546 0 0 0-2.622-2.623 2.308 2.308 0 0 0-1.675.774c-.292.339-.529.72-.703 1.132a4.292 4.292 0 0 0-.703-1.132 2.307 2.307 0 0 0-1.675-.774A2.549 2.549 0 0 0 5 3.873a2.307 2.307 0 0 0 .774 1.674c.03.026.061.05.092.078H3.125a1.25 1.25 0 0 0-1.25 1.25v2.5a1.25 1.25 0 0 0 1.25 1.25v5a1.25 1.25 0 0 0 1.25 1.25h11.25a1.25 1.25 0 0 0 1.25-1.25v-5a1.25 1.25 0 0 0 1.25-1.25v-2.5a1.25 1.25 0 0 0-1.25-1.25Zm-5.234-2.773a1.07 1.07 0 0 1 .78-.351h.04a1.298 1.298 0 0 1 1.289 1.333 1.07 1.07 0 0 1-.352.782c-.741.656-1.971.887-2.734.968.094-.827.352-2.03.977-2.732Zm-5.007.029a1.3 1.3 0 0 1 .912-.38h.038a1.07 1.07 0 0 1 .782.35c.655.741.886 1.97.968 2.729-.76-.078-1.988-.313-2.729-.968a1.07 1.07 0 0 1-.351-.781 1.297 1.297 0 0 1 .376-.95h.004ZM3.125 6.875h6.25v2.5h-6.25v-2.5Zm1.25 3.75h5v5h-5v-5Zm11.25 5h-5v-5h5v5Zm1.25-6.25h-6.25v-2.5h6.25v2.5Z"
+                        ></path></svg></span
+                    ><span class="">Coupons</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m7.5 18.75 1.25-6.25-5-1.875L12.5 1.25 11.25 7.5l5 1.875L7.5 18.75Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M16.859 9.232a.625.625 0 0 0-.391-.442l-4.5-1.689 1.145-5.729a.625.625 0 0 0-1.07-.546L3.293 10.2a.625.625 0 0 0 .234 1.015l4.503 1.689-1.142 5.722a.625.625 0 0 0 1.07.547l8.75-9.375a.626.626 0 0 0 .15-.567Zm-8.314 7.487.818-4.093a.625.625 0 0 0-.391-.707l-4.128-1.551 6.61-7.083-.817 4.092a.625.625 0 0 0 .391.708l4.125 1.547-6.608 7.087Z"
+                        ></path></svg></span
+                    ><span class="">Flash Sale</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Feature Management
+              </div>
+              <div class="space-y-2">
+                <a
+                  title="Message"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/message"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M18.106 16.901a.469.469 0 0 1-.58.58l-2.333-.666a5.628 5.628 0 0 1-8-3.074 5.625 5.625 0 0 0 5.614-7.482 5.625 5.625 0 0 1 4.631 8.31l.668 2.332Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M18.109 14.635a6.25 6.25 0 0 0-4.861-8.964A6.25 6.25 0 1 0 1.89 10.885l-.598 2.096a1.094 1.094 0 0 0 1.352 1.351l2.095-.598c.632.31 1.312.512 2.012.596a6.25 6.25 0 0 0 8.508 3.154l2.095.598a1.094 1.094 0 0 0 1.352-1.351l-.598-2.096ZM4.807 12.44a.64.64 0 0 0-.172.024l-2.063.59.59-2.064a.625.625 0 0 0-.053-.469 4.996 4.996 0 1 1 1.997 1.998.62.62 0 0 0-.299-.079Zm12.031 2.3.59 2.063-2.063-.59a.625.625 0 0 0-.469.054 5.005 5.005 0 0 1-6.744-1.925 6.245 6.245 0 0 0 5.496-7.333 5 5 0 0 1 3.243 7.26.624.624 0 0 0-.053.471Z"
+                      ></path></svg></span
+                  ><span class="">Message</span></a
+                ><a
+                  title="Store Notice"
+                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100"
+                  href="/store-notices"
+                  ><span
+                    class="transition text-gray-600 group-focus:text-accent"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      class="w-5 h-5"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M17.5 15a1.875 1.875 0 0 1-1.875 1.875h-8.75A1.875 1.875 0 0 0 8.75 15c0-.781-.625-1.25-.625-1.25h8.75s.625.469.625 1.25Z"
+                        opacity="0.2"
+                      ></path>
+                      <path
+                        fill="currentColor"
+                        d="M7.5 8.125a.625.625 0 0 1 .625-.625h5a.625.625 0 1 1 0 1.25h-5a.625.625 0 0 1-.625-.625Zm.625 3.125h5a.624.624 0 1 0 0-1.25h-5a.625.625 0 1 0 0 1.25Zm10 3.75a2.5 2.5 0 0 1-2.5 2.5h-8.75a2.5 2.5 0 0 1-2.5-2.5V5a1.25 1.25 0 0 0-2.5 0c0 .448.377.752.381.755a.625.625 0 0 1-.755.994C1.41 6.683.625 6.063.625 5a2.5 2.5 0 0 1 2.5-2.5H13.75a2.5 2.5 0 0 1 2.5 2.5v8.125h.625c.135 0 .267.044.375.125.094.067.875.687.875 1.75ZM7.52 13.553a.63.63 0 0 1 .605-.428H15V5a1.25 1.25 0 0 0-1.25-1.25H5.288c.221.38.338.81.337 1.25v10a1.25 1.25 0 0 0 2.5 0c0-.448-.377-.752-.381-.755a.611.611 0 0 1-.224-.692ZM16.875 15a.983.983 0 0 0-.252-.625H9.279c.063.202.095.413.094.625.001.439-.115.87-.335 1.25h6.587a1.25 1.25 0 0 0 1.25-1.25Z"
+                      ></path></svg></span
+                  ><span class="">Store Notice</span></a
+                >
+              </div>
+            </div>
+            <div class="flex flex-col px-5 pt-6 pb-3">
+              <div
+                class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
+              >
+                Site management
+              </div>
+              <div class="space-y-2">
+                <div
+                  class="group cursor-pointer rounded-md px-3 py-2.5 text-body-dark hover:bg-gray-100 focus:text-accent"
+                >
+                  <div class="flex w-full items-center text-sm">
+                    <span class="text-gray-600"
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        class="w-5 h-5 me-3"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M15.625 3.125v13.75H4.375V3.125h11.25Z"
+                          opacity="0.2"
+                        ></path>
+                        <path
+                          fill="currentColor"
+                          d="M10.625 9.375v7.5a.624.624 0 1 1-1.25 0v-7.5a.625.625 0 0 1 1.25 0Zm5 5.625a.624.624 0 0 0-.625.625v1.25a.624.624 0 1 0 1.25 0v-1.25a.624.624 0 0 0-.625-.625Zm1.875-2.5h-1.25V3.125a.625.625 0 1 0-1.25 0V12.5h-1.25a.624.624 0 1 0 0 1.25h3.75a.624.624 0 1 0 0-1.25Zm-13.125 0a.625.625 0 0 0-.625.625v3.75a.625.625 0 1 0 1.25 0v-3.75a.625.625 0 0 0-.625-.625ZM6.25 10H5V3.125a.625.625 0 0 0-1.25 0V10H2.5a.625.625 0 1 0 0 1.25h3.75a.625.625 0 1 0 0-1.25Zm5.625-3.75h-1.25V3.125a.625.625 0 1 0-1.25 0V6.25h-1.25a.625.625 0 0 0 0 1.25h3.75a.625.625 0 1 0 0-1.25Z"
+                        ></path></svg></span
+                    ><span class="">Settings</span
+                    ><svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      class="h-3.5 w-3.5 shrink-0 opacity-75 transition-transform duration-300 ltr:ml-auto ltr:mr-0 rtl:mr-auto rtl:ml-0"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="os-scrollbar os-scrollbar-horizontal os-theme-dark os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-cornerless os-scrollbar-unusable"
+          >
+            <div class="os-scrollbar-track">
+              <div
+                class="os-scrollbar-handle"
+                style="width: 100%"
+              ></div>
+            </div>
+          </div>
+          <div
+            class="os-scrollbar os-scrollbar-vertical os-theme-dark os-scrollbar-auto-hide os-scrollbar-handle-interactive os-scrollbar-visible os-scrollbar-cornerless"
+          >
+            <div class="os-scrollbar-track">
+              <div
+                class="os-scrollbar-handle"
+                style="height: 35.223%"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </v-col>
+
+      <v-col cols="10">
+        <slot></slot>
+      </v-col>
+    </v-row>
+  </div>
+</template>

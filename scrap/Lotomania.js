@@ -3,11 +3,17 @@ import Base from "./Base.js";
 export default class extends Base {
   id = "lotomania";
   name = "Lotomania";
+  color = "#f78128";
+  active = true;
   rangeStart = 1;
   rangeFinal = 100;
   rangePerRow = 10;
+  drawnNumbers = 20;
+  selectMin = 50;
+  selectMax = 50;
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=lotomania";
+  tutorials = ["t_9FsxfliNU"];
 
   parseRow(row) {
     return {
