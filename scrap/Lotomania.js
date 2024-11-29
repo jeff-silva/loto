@@ -15,6 +15,8 @@ export default class extends Base {
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=lotomania";
   tutorials = ["t_9FsxfliNU"];
 
+  tables = {};
+
   parseRow(row) {
     return {
       contest: row["A"],

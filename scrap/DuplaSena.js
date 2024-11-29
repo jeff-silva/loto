@@ -15,6 +15,8 @@ export default class extends Base {
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=dupla-sena";
   tutorials = ["6T4fyk6b3yE"];
 
+  tables = {};
+
   parseRow(row) {
     return {
       contest: row["A"],

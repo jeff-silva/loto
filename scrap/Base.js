@@ -15,6 +15,8 @@ export default class Base {
   url =
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=xxx";
 
+  tables = {};
+
   async getData() {
     const resp = await (await fetch(this.url)).arrayBuffer();
     const workbook = XLSX.read(new Uint8Array(resp), { type: "array" });
@@ -40,5 +42,15 @@ export default class Base {
       date: row["B"].split("/").reverse().join("-"),
       numbers: [],
     };
+  }
+
+  getTables() {
+    return {};
+  }
+
+  chunk(arr, size) {
+    return Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+      arr.slice(i * size, i * size + size)
+    );
   }
 }

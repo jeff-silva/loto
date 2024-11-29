@@ -16,6 +16,8 @@ export default class extends Base {
     "https://servicebus2.caixa.gov.br/portaldeloterias/api/resultados/download?modalidade=milionaria";
   tutorials = ["mUdsIkRCqhM"];
 
+  tables = {};
+
   parseRow(row) {
     return {
       contest: row["A"],

@@ -1,0 +1,1 @@
+var t=Object.defineProperty;var d=(s,e,a)=>e in s?t(s,e,{enumerable:!0,configurable:!0,writable:!0,value:a}):s[e]=a;var o=(s,e,a)=>d(s,typeof e!="symbol"?e+"":e,a);import{B as r}from"./B0ryGAvV.js";import"./CklR0kxn.js";class f extends r{constructor(){super(...arguments);o(this,"name","Números repetidos");o(this,"goods",[]);o(this,"bads",[])}}export{f as default};

@@ -27,19 +27,7 @@ const items = [
       className = new className();
       if (!className.active) return;
 
-      let item = {
-        id: className.id,
-        name: className.name,
-        color: className.color,
-        rangeStart: className.rangeStart,
-        rangeFinal: className.rangeFinal,
-        rangePerRow: className.rangePerRow,
-        drawnNumbers: className.drawnNumbers,
-        selectMin: className.selectMin,
-        selectMax: className.selectMax,
-        tutorials: [],
-        contests: [],
-      };
+      let item = JSON.parse(JSON.stringify(className));
 
       item.tutorials = await Promise.all(
         className.tutorials.map(async (videoId) => {

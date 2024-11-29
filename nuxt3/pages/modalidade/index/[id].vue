@@ -5,48 +5,70 @@
         cols="12"
         md="5"
       >
-        <v-table class="border">
-          <tbody>
-            <template v-for="cols in numbers">
-              <tr>
-                <template v-for="n in cols">
-                  <td class="text-center">
-                    <lotto-number
-                      :text="n"
-                      :color="modalidade.color"
-                      :selected="contest.value.numbers.includes(n)"
-                    />
-                  </td>
-                </template>
-              </tr>
-            </template>
-          </tbody>
-        </v-table>
-        <!-- <pre>contest: {{ contest }}</pre> -->
-        <pre>modalidade.contests.length: {{ modalidade.contests.length }}</pre>
+        <template v-for="t in modalidade.value.tables">
+          <table class="mb-4">
+            <caption class="text-h6 text-left pa-2">
+              {{
+                t.name
+              }}
+            </caption>
+            <tbody>
+              <template v-for="cols in t.data">
+                <tr>
+                  <template v-for="n in cols">
+                    <td class="pa-1">
+                      <lotto-number
+                        :text="n"
+                        :color="props.modalidade.color"
+                        :selected="contest.value.numbers.includes(n)"
+                        class="mx-auto"
+                      />
+                    </td>
+                  </template>
+                </tr>
+              </template>
+            </tbody>
+          </table>
+        </template>
+        <pre>algorithms: {{ algorithms }}</pre>
       </v-col>
       <v-col
         cols="12"
         md="7"
       >
         <v-data-table-virtual
-          class="border"
-          :items="modalidade.contests"
+          class="border elevation-10"
+          :fixed-header="true"
           :disable-sort="true"
+          select-strategy="single"
+          height="calc(100vh - 78px)"
+          :items="modalidade.value.contests"
           :headers="[
             { title: 'Sorteio', key: 'contest', width: 0 },
-            { title: 'Data', key: 'date', width: 150 },
+            { title: 'Data', key: 'date', width: 100 },
             { title: 'Números', key: 'numbers' },
           ]"
-          height="calc(100vh - 78px)"
         >
+          <template #item.contest="scope">
+            <a
+              href="javascript:void(0);"
+              @click="contest.set(scope.item)"
+            >
+              {{ scope.item.contest }}
+            </a>
+          </template>
+          <template #item.date="scope">
+            <div style="width: 100px">
+              {{ scope.item.date }}
+            </div>
+          </template>
           <template #item.numbers="scope">
             <div class="flex gap-2">
               <template v-for="n in scope.item.numbers">
                 <lotto-number
                   :text="n"
                   :selected="true"
-                  :color="modalidade.color"
+                  :color="props.modalidade.color"
                 />
               </template>
             </div>
@@ -62,19 +84,15 @@ const props = defineProps({
   modalidade: { type: Object, deault: () => ({}) },
 });
 
-const numbers = computed(() => {
-  const chunk = (arr, size) =>
-    Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-      arr.slice(i * size, i * size + size)
-    );
-
-  return chunk(
-    [...Array(props.modalidade.rangeFinal).keys()].map((n) =>
-      (n + 1).toString().padStart(2, "0")
-    ),
-    props.modalidade.rangePerRow
-  );
+const modalidade = reactive({
+  value: null,
+  set(value) {
+    modalidade.value = JSON.parse(JSON.stringify(value));
+    modalidade.value.contests = modalidade.value.contests.reverse();
+  },
 });
+
+modalidade.set(props.modalidade);
 
 const contest = reactive({
   value: null,
@@ -84,4 +102,7 @@ const contest = reactive({
 });
 
 contest.set(props.modalidade.contests[0]);
+
+import Base from "@/loto-algorithms/Base.js";
+const algorithms = await Base.all([]);
 </script>
