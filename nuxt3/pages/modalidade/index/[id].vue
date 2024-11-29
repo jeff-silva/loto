@@ -1,80 +1,76 @@
 <template>
   <div>
-    <div class="d-flex align-items-center justify-end pa-3">
-      <div>
-        <strong>{{ modalidade.name }}</strong>
-      </div>
-      <v-spacer />
-      <v-dialog
-        v-if="modalidade.tutorials.length > 0"
-        max-width="700"
-        scrollable
+    <v-row>
+      <v-col
+        cols="12"
+        md="5"
       >
-        <template #activator="scope">
-          <v-btn
-            text="Como Jogar?"
-            v-bind="scope.props"
-          />
-        </template>
-
-        <template #default="scope">
-          <v-card>
-            <v-card-text class="pa-0">
-              <template v-for="o in modalidade.tutorials">
-                <iframe
-                  :src="o.embed_url"
-                  style="border: none; width: 100%; height: 400px"
-                ></iframe>
-              </template>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn
-                text="Fechar"
-                @click="scope.isActive.value = false"
-              />
-            </v-card-actions>
-          </v-card>
-        </template>
-      </v-dialog>
-    </div>
-    <!-- <pre>{{ modalidade }}</pre> -->
-
-    <div style="width: 100%; max-height: 600px; overflow: auto">
-      <v-table class="border">
-        <colgroup>
-          <col width="20px" />
-          <col width="200px" />
-          <template v-for="o in modalidade.drawnNumbers">
-            <col width="0" />
-          </template>
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Sorteio</th>
-            <th>Data</th>
-            <template v-for="n in modalidade.drawnNumbers">
-              <th>Nº{{ n }}</th>
+        <v-table class="border">
+          <tbody>
+            <template v-for="cols in numbers">
+              <tr>
+                <template v-for="n in cols">
+                  <td class="text-center">
+                    <lotto-number
+                      :text="n"
+                      :color="modalidade.color"
+                    />
+                  </td>
+                </template>
+              </tr>
             </template>
-          </tr>
-        </thead>
-        <tbody>
-          <template v-for="o in modalidade.contests">
-            <tr>
-              <td>{{ o.contest }}</td>
-              <td>{{ o.date }}</td>
-              <template v-for="n in o.numbers">
-                <td>{{ n }}</td>
+          </tbody>
+        </v-table>
+        <!-- <pre>{{ numbers }}</pre> -->
+        <!-- <pre>{{ modalidade }}</pre> -->
+      </v-col>
+      <v-col
+        cols="12"
+        md="7"
+      >
+        <v-data-table-virtual
+          :items="modalidade.contests.reverse()"
+          :headers="[
+            { title: 'Sorteio', key: 'contest', width: 0 },
+            { title: 'Data', key: 'date', width: 150 },
+            { title: 'Números', key: 'numbers' },
+          ]"
+          height="calc(100vh - 60px)"
+          item-value="name"
+        >
+          <template #item.numbers="scope">
+            <div class="flex gap-2">
+              <template v-for="n in scope.item.numbers">
+                <lotto-number
+                  :text="n"
+                  :selected="true"
+                  :color="modalidade.color"
+                />
               </template>
-            </tr>
+            </div>
           </template>
-        </tbody>
-      </v-table>
-    </div>
+        </v-data-table-virtual>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
   modalidade: { type: Object, deault: () => ({}) },
+});
+
+const numbers = computed(() => {
+  const chunk = (arr, size) =>
+    Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+      arr.slice(i * size, i * size + size)
+    );
+
+  return chunk(
+    [...Array(props.modalidade.rangeFinal).keys()].map((n) =>
+      (n + 1).toString().padStart(2, "0")
+    ),
+    props.modalidade.rangePerRow
+  );
 });
 </script>

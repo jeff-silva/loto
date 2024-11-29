@@ -1,16 +1,53 @@
 <template>
   <div>
-    <v-row>
-      <v-col cols="2">
-        <!-- <v-list>
-          <template v-for="o in contests">
-            <v-list-item
-              :to="`/modalidade/${o.id}`"
-              :text="o.name"
+    <v-app-layout>
+      <template #default="scope">
+        <nuxt-page
+          v-if="modalidade"
+          :modalidade="modalidade"
+        />
+      </template>
+
+      <template
+        #header="scope"
+        v-if="modalidade"
+      >
+        <div class="text-h4">{{ modalidade.name }}</div>
+        <v-spacer />
+        <v-dialog
+          v-if="modalidade.tutorials.length > 0"
+          max-width="700"
+          scrollable
+        >
+          <template #activator="scope">
+            <v-btn
+              text="Como Jogar?"
+              v-bind="scope.props"
             />
           </template>
-        </v-list> -->
 
+          <template #default="scope">
+            <v-card>
+              <v-card-text class="pa-0">
+                <template v-for="o in modalidade.tutorials">
+                  <iframe
+                    :src="o.embed_url"
+                    style="border: none; width: 100%; height: 400px"
+                  ></iframe>
+                </template>
+              </v-card-text>
+              <v-card-actions>
+                <v-btn
+                  text="Fechar"
+                  @click="scope.isActive.value = false"
+                />
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-dialog>
+      </template>
+
+      <template #drawer="scope">
         <div class="flex flex-col py-6">
           <div
             class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
@@ -38,21 +75,20 @@
             </div>
           </template>
         </div>
-      </v-col>
-
-      <v-col cols="10">
-        <nuxt-page
-          v-if="
-            route.params.id && typeof contests[route.params.id] != 'undefined'
-          "
-          :modalidade="contests[route.params.id]"
-        />
-      </v-col>
-    </v-row>
+      </template>
+    </v-app-layout>
   </div>
 </template>
 
 <script setup>
 import contests from "@/contests.json";
 const route = useRoute();
+
+const modalidade = computed(() => {
+  if (!route.params.id) return null;
+  if (typeof contests[route.params.id] == "undefined") {
+    return null;
+  }
+  return contests[route.params.id];
+});
 </script>
