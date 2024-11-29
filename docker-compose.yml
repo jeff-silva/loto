@@ -1,0 +1,17 @@
+# Para levantar todos os serviços do arquivo:
+# docker compose up --build --force-recreate --remove-orphans
+
+services:
+  # Nuxt 3: Execute o comando abaixo para criar a pasta da aplicação.
+  # A aplicação será criada na pasta /nuxt3, renomeie-a caso queira.
+  # docker run --rm -it -v $(pwd):/app -w /app node:18 npx nuxi@latest init nuxt3
+  nuxt3:
+    image: node:18.16.0
+    working_dir: /app
+    command: bash -c "yarn install && yarn dev"
+    environment:
+      NUXT3_PORT: 3000
+    ports:
+      - 3000:3000
+    volumes:
+      - ./nuxt3:/app

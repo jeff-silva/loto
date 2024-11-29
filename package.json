@@ -1,0 +1,11 @@
+{
+  "name": "loto",
+  "version": "1.0.0",
+  "repository": "https://github.com/jeff-silva/loto.git",
+  "author": "Jeferson Silva <jeferson.i.silva@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "docker compose up --build --force-recreate --remove-orphans"
+  }
+}
