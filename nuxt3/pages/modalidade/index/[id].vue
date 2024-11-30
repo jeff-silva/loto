@@ -30,6 +30,24 @@
             </tbody>
           </table>
         </template>
+
+        <template v-for="o in algorithms">
+          <v-card>
+            <v-card-title>{{ o.name }}</v-card-title>
+            <v-card-text>
+              <div class="flex">
+                <template v-for="n in o.goods">
+                  <lotto-number
+                    :text="n"
+                    :color="props.modalidade.color"
+                    :selected="contest.value.numbers.includes(n)"
+                    class="mx-auto"
+                  />
+                </template>
+              </div>
+            </v-card-text>
+          </v-card>
+        </template>
         <pre>algorithms: {{ algorithms }}</pre>
       </v-col>
       <v-col
@@ -104,5 +122,5 @@ const contest = reactive({
 contest.set(props.modalidade.contests[0]);
 
 import Base from "@/loto-algorithms/Base.js";
-const algorithms = await Base.all([]);
+const algorithms = await Base.all(modalidade.value);
 </script>
