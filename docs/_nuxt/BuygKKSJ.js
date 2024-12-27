@@ -1,0 +1,1 @@
+import{_ as o}from"./BEV9I3MA.js";import{_ as n,c as a,b as _,w as d,o as r,d as s}from"./ChcvI5aH.js";const c={};function i(l,e){const t=o;return r(),a("div",null,[_(t,{to:"/modalidade"},{default:d(()=>e[0]||(e[0]=[s("Modalidades")])),_:1})])}const x=n(c,[["render",i]]);export{x as default};
