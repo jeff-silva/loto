@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Política de privacidade</h1>
+    <h1>Política de Segurança</h1>
     <p>
       Ipsum laudantium ipsa provident, quisquam atque quam voluptatem veniam
       facilis fugiat eligendi consequuntur cumque quia qui quasi quas corporis
