@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <nuxt-layout name="site">
     <h1>Política de Acessibilidade</h1>
     <p>
       Ipsum laudantium ipsa provident, quisquam atque quam voluptatem veniam
@@ -20,5 +20,5 @@
       omnis fugiat. Quo molestiae deleniti atque numquam at blanditiis expedita,
       soluta pariatur!
     </p>
-  </div>
+  </nuxt-layout>
 </template>

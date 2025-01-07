@@ -1,5 +1,12 @@
 <template>
-  <div>
+  <nuxt-layout name="site">
+    <div v-if="modalidade">
+      <h2 class="text-h4">{{ modalidade.name }}</h2>
+      <br />
+      <nuxt-page :modalidade="modalidade" />
+    </div>
+  </nuxt-layout>
+  <!-- <div>
     <v-app-layout>
       <template #default="scope">
         <nuxt-page
@@ -77,7 +84,7 @@
         </div>
       </template>
     </v-app-layout>
-  </div>
+  </div> -->
 </template>
 
 <script setup>

@@ -1,4 +1,47 @@
+<script setup>
+import contests from "@/contests.json";
+
+const navItems = computed(() => {
+  let modalities = { title: "Modalidades", children: [] };
+  Object.values(contests).map((modality) => {
+    modalities.children.push({
+      title: modality.name,
+      to: `/modalidade/${modality.id}`,
+      icon: "mdi:clover",
+    });
+  });
+
+  let policies = {
+    title: "Políticas",
+    children: [
+      { to: "/policy/accessibility", title: "Política de Acessibilidade" },
+      { to: "/policy/cookie", title: "Política de Cookie" },
+      { to: "/policy/privacy", title: "Política de Privacidade" },
+      { to: "/policy/security", title: "Política de Segurança" },
+      { to: "/policy/terms", title: "Termos de Uso" },
+    ],
+  };
+
+  return [modalities, policies];
+});
+</script>
+
 <template>
+  <v-app-layout>
+    <!-- <template #header="bind">
+      <div>Header</div>
+    </template> -->
+    <template #drawer="bind">
+      <v-nav :items="navItems" />
+    </template>
+    <template #default="bind">
+      <slot></slot>
+    </template>
+    <!-- <template #loading="bind"></template> -->
+  </v-app-layout>
+</template>
+
+<!-- <template>
   <div>
     <v-row>
       <v-col cols="2">
@@ -29,32 +72,27 @@
               <div
                 class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
               >
-                Main
+                Modalidades
               </div>
               <div class="space-y-2">
-                <a
-                  title="Dashboard"
-                  class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100 font-medium !text-accent-hover bg-accent/10 hover:!bg-accent/10"
-                  href="/"
-                  ><span class="transition text-accent-hover"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      class="w-5 h-5"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M8.75 4.375v3.75a.625.625 0 0 1-.625.625h-3.75a.625.625 0 0 1-.625-.625v-3.75a.625.625 0 0 1 .625-.625h3.75a.625.625 0 0 1 .625.625Zm6.875-.625h-3.75a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 0 .625.625h3.75a.625.625 0 0 0 .625-.625v-3.75a.625.625 0 0 0-.625-.625Zm-7.5 7.5h-3.75a.625.625 0 0 0-.625.625v3.75a.625.625 0 0 0 .625.625h3.75a.625.625 0 0 0 .625-.625v-3.75a.625.625 0 0 0-.625-.625Zm7.5 0h-3.75a.624.624 0 0 0-.625.625v3.75a.624.624 0 0 0 .625.625h3.75a.624.624 0 0 0 .625-.625v-3.75a.624.624 0 0 0-.625-.625Z"
-                        opacity="0.2"
-                      ></path>
-                      <path
-                        fill="currentColor"
-                        d="M15.625 10.625h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Zm-7.5-12.5h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Zm7.5-5h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Zm-7.5 2.5h-3.75a1.25 1.25 0 0 0-1.25 1.25v3.75a1.25 1.25 0 0 0 1.25 1.25h3.75a1.25 1.25 0 0 0 1.25-1.25v-3.75a1.25 1.25 0 0 0-1.25-1.25Zm0 5h-3.75v-3.75h3.75v3.75Z"
-                      ></path></svg></span
-                  ><span class="">Dashboard</span></a
-                >
+                <template v-for="(o, name) in contests">
+                  <nuxt-link
+                    title="Dashboard"
+                    class="group flex w-full items-center gap-2.5 rounded-md px-3 py-2.5 text-sm text-gray-700 text-start focus:text-accent hover:bg-gray-100 font-medium !text-accent-hover bg-accent/10 hover:!bg-accent/10"
+                    :to="`/modalidade/${o.id}`"
+                  >
+                    <span class="transition text-accent-hover">
+                      <v-icon
+                        icon="mdi:clover"
+                        :color="o.color"
+                      />
+                    </span>
+                    <span class="">{{ o.name }}</span>
+                  </nuxt-link>
+                </template>
               </div>
             </div>
+
             <div class="flex flex-col px-5 pt-6 pb-3">
               <div
                 class="px-3 pb-5 text-xs font-semibold uppercase tracking-[0.05em] text-body/60"
@@ -1000,4 +1038,4 @@
       </v-col>
     </v-row>
   </div>
-</template>
+</template> -->
