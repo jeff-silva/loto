@@ -1,0 +1,1 @@
+import{_ as d}from"./oincDqRJ.js";import{_ as r,c as s,b as o,w as n,o as _,d as a}from"./BogkvAYC.js";const i={};function c(l,t){const e=d;return _(),s("div",null,[o(e,{to:"/modalidade"},{default:n(()=>t[0]||(t[0]=[a("Modalidades")])),_:1}),o(e,{to:"/privacy"},{default:n(()=>t[1]||(t[1]=[a("Privacidade")])),_:1})])}const p=r(i,[["render",c]]);export{p as default};
