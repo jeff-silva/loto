@@ -30,25 +30,6 @@
             </tbody>
           </table>
         </template>
-
-        <template v-for="o in algorithms">
-          <v-card>
-            <v-card-title>{{ o.name }}</v-card-title>
-            <v-card-text>
-              <div class="flex">
-                <template v-for="n in o.goods">
-                  <lotto-number
-                    :text="n"
-                    :color="props.modalidade.color"
-                    :selected="contest.value.numbers.includes(n)"
-                    class="mx-auto"
-                  />
-                </template>
-              </div>
-            </v-card-text>
-          </v-card>
-        </template>
-        <pre>algorithms: {{ algorithms }}</pre>
       </v-col>
       <v-col
         cols="12"
