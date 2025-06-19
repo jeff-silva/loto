@@ -1,3 +1,5 @@
+#!/bin/bash
+
 reset
 rm -rf ./docs
 docker compose run --rm nuxt3 yarn generate
