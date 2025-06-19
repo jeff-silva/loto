@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "docker compose up --build --force-recreate --remove-orphans",
-    "scrap": "node ./scrap/index.js",
+    "scrap": "docker compose -f compose-scrap.yml up --build --force-recreate --remove-orphans",
     "build": "sh build.sh"
   }
 }

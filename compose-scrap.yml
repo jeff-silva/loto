@@ -1,0 +1,7 @@
+services:
+  scrap:
+    image: node:22
+    working_dir: /app
+    command: bash -c "yarn install && yarn dev"
+    volumes:
+      - ./scrap/app:/app
