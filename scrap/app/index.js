@@ -26,6 +26,7 @@ const items = [
     items.map(async (className) => {
       className = new className();
       if (!className.active) return;
+      console.log(`Baixando resultados de ${className.name}`);
 
       let item = JSON.parse(JSON.stringify(className));
 
